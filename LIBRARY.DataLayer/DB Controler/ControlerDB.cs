@@ -12,7 +12,13 @@ namespace LIBRARY.DataLayer.DB_Controler
 {
     public class ControlerDB : IDisposable
     {
-        Library_DBEntities db = new Library_DBEntities();
+        Library_DBEntities db;
+        
+        public ControlerDB()
+        {
+            db = new Library_DBEntities();
+        }
+        
         private ICustomersRepository _customersRepository;
 
         public ICustomersRepository CustomersRepository
